@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>For You, Sis.</title>
+    <title>For You, Sis ❤️</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,29 +19,23 @@
 
 <body>
 
-    <!-- Cursor -->
     <div class="cursor"></div>
     <div class="cursor-dot"></div>
 
-
-    <!-- Ambient Background -->
     <div class="ambient ambient-1"></div>
     <div class="ambient ambient-2"></div>
     <div class="ambient ambient-3"></div>
 
     <div class="stars" id="stars"></div>
 
-
-    <!-- ==================================================
-         SCENE 01
-    =================================================== -->
+    <!-- OPENING -->
 
     <section class="scene opening" id="opening">
 
         <div class="opening-content">
 
             <p class="micro-text">
-                AUGUST 2026
+                A LITTLE SOMETHING FOR YOU
             </p>
 
             <h1>
@@ -54,38 +48,28 @@
             </p>
 
             <button class="begin-btn" id="beginBtn">
-
                 <span>Begin the surprise</span>
-
                 <strong>→</strong>
-
             </button>
 
         </div>
 
-        <div class="scroll-indicator">
-            <span></span>
-        </div>
+        <div class="scroll-indicator"></div>
 
     </section>
 
 
-    <!-- ==================================================
-         SCENE 02 — RAKHI
-    =================================================== -->
+    <!-- RAKHI -->
 
     <section class="scene rakhi-scene hidden" id="rakhiScene">
 
-        <div class="scene-number">
-            01
-        </div>
+        <div class="scene-number">01</div>
 
         <div class="rakhi-content">
 
             <p class="micro-text">
                 A THREAD. A PROMISE. A BOND.
             </p>
-
 
             <div class="rakhi-art">
 
@@ -114,19 +98,18 @@
 
             </div>
 
-
             <h2>
                 Tied once.
                 <span>Remembered forever.</span>
             </h2>
 
             <p class="rakhi-description">
-                Because some relationships become more
-                beautiful with every passing year.
+                Because some relationships become more beautiful
+                with every passing year.
             </p>
 
-            <button class="next-btn" id="photoBtn">
-                There's something I want you to see
+            <button class="next-btn" id="memoryBtn">
+                I made something a little different
                 <span>→</span>
             </button>
 
@@ -135,107 +118,78 @@
     </section>
 
 
-    <!-- ==================================================
-         SCENE 03 — PHOTO
-    =================================================== -->
+    <!-- MEMORY UNIVERSE -->
 
-    <section class="scene photo-scene hidden" id="photoScene">
+    <section class="scene memory-scene hidden" id="memoryScene">
 
-        <div class="scene-number">
-            02
-        </div>
+        <div class="scene-number">02</div>
 
+        <div class="memory-content">
 
-        <div class="photo-content">
+            <p class="micro-text">
+                NO PHOTO. JUST MEMORIES.
+            </p>
 
-            <div class="photo-heading">
+            <h2>
+                The best memories
+                <span>live here.</span>
+            </h2>
 
-                <p class="micro-text">
-                    ONE OF MY FAVOURITE PEOPLE
-                </p>
+            <div class="memory-universe">
 
-                <h2>
-                    Behind every
-                    <span>memory...</span>
-                </h2>
+                <div class="universe-glow"></div>
 
-            </div>
+                <div class="orbit orbit-a"></div>
+                <div class="orbit orbit-b"></div>
+                <div class="orbit orbit-c"></div>
 
+                <div class="memory-star star-a">✦</div>
+                <div class="memory-star star-b">✦</div>
+                <div class="memory-star star-c">✦</div>
+                <div class="memory-star star-d">✦</div>
 
-            <!-- LANDSCAPE PHOTO -->
-            <div class="cinematic-photo">
+                <div class="memory-core">
 
-                <div class="photo-overlay"></div>
+                    <div class="core-heart">♡</div>
 
-                <img
-                    src="assets/images/sister.jpeg"
-                    alt="My Sister"
-                >
-
-                <div class="photo-top-info">
-                    <span>MEMORY / 01</span>
-                    <span>♡</span>
-                </div>
-
-                <div class="photo-caption">
-
-                    <div>
-
-                        <p>
-                            MY SISTER
-                        </p>
-
-                        <h3>
-                            One of my favourite
-                            people in this world.
-                        </h3>
-
-                    </div>
-
-                    <div class="photo-year">
-                        ALWAYS
-                    </div>
+                    <p>
+                        countless
+                        <br>
+                        little moments
+                    </p>
 
                 </div>
 
             </div>
 
+            <p class="memory-text">
+                Not every beautiful moment needs a photograph.
+                Some moments stay quietly in the heart —
+                the laughs, the fights, the nonsense,
+                and everything in between.
+            </p>
 
-            <div class="photo-bottom">
-
-                <p>
-                    Some photographs capture a moment.
-                    Some capture a feeling.
-                </p>
-
-                <button class="next-btn" id="letterBtn">
-                    Open the letter
-                    <span>→</span>
-                </button>
-
-            </div>
+            <button class="next-btn" id="letterBtn">
+                Open the letter
+                <span>→</span>
+            </button>
 
         </div>
 
     </section>
 
 
-    <!-- ==================================================
-         SCENE 04 — LETTER
-    =================================================== -->
+    <!-- LETTER -->
 
     <section class="scene letter-scene hidden" id="letterScene">
 
-        <div class="scene-number">
-            03
-        </div>
+        <div class="scene-number">03</div>
 
         <div class="letter-wrapper">
 
             <p class="micro-text">
                 A FEW WORDS FROM YOUR BROTHER
             </p>
-
 
             <div class="envelope" id="envelope">
 
@@ -246,7 +200,7 @@
                     <div class="letter-content">
 
                         <p class="letter-greeting">
-                            Hey Sis,
+                            Behen ji...!
                         </p>
 
                         <p id="typingText"></p>
@@ -269,7 +223,6 @@
 
             </div>
 
-
             <button class="open-letter" id="openLetter">
                 Open my letter
             </button>
@@ -279,9 +232,7 @@
     </section>
 
 
-    <!-- ==================================================
-         SCENE 05 — FINAL
-    =================================================== -->
+    <!-- FINAL -->
 
     <section class="scene final-scene hidden" id="finalScene">
 
@@ -290,7 +241,7 @@
         <div class="final-content">
 
             <div class="final-symbol">
-                <span></span>
+                <span>♡</span>
             </div>
 
             <p class="micro-text">
@@ -327,11 +278,11 @@
     </section>
 
 
-    <!-- Progress -->
+    <!-- PROGRESS -->
+
     <div class="progress" id="progress">
 
         <span class="active"></span>
-        <span></span>
         <span></span>
         <span></span>
         <span></span>

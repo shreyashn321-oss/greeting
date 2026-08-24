@@ -1,15 +1,11 @@
-/* ==================================================
-   ELEMENTS
-================================================== */
-
 const opening =
     document.getElementById("opening");
 
 const rakhiScene =
     document.getElementById("rakhiScene");
 
-const photoScene =
-    document.getElementById("photoScene");
+const memoryScene =
+    document.getElementById("memoryScene");
 
 const letterScene =
     document.getElementById("letterScene");
@@ -21,8 +17,8 @@ const finalScene =
 const beginBtn =
     document.getElementById("beginBtn");
 
-const photoBtn =
-    document.getElementById("photoBtn");
+const memoryBtn =
+    document.getElementById("memoryBtn");
 
 const letterBtn =
     document.getElementById("letterBtn");
@@ -45,11 +41,9 @@ const stars =
     document.getElementById("stars");
 
 
-/* ==================================================
-   CREATE STARS
-================================================== */
+/* STARS */
 
-for (let i = 0; i < 90; i++) {
+for (let i = 0; i < 100; i++) {
 
     const star =
         document.createElement("span");
@@ -72,9 +66,7 @@ for (let i = 0; i < 90; i++) {
 }
 
 
-/* ==================================================
-   CHANGE SCENE
-================================================== */
+/* SCENE CHANGE */
 
 function changeScene(current, next, index) {
 
@@ -115,90 +107,91 @@ function changeScene(current, next, index) {
 }
 
 
-/* ==================================================
-   OPEN
-================================================== */
+/* OPENING */
 
-beginBtn.addEventListener("click", () => {
-
-    changeScene(
-        opening,
-        rakhiScene,
-        1
-    );
-
-});
-
-
-/* ==================================================
-   RAKHI → PHOTO
-================================================== */
-
-photoBtn.addEventListener("click", () => {
-
-    changeScene(
-        rakhiScene,
-        photoScene,
-        2
-    );
-
-});
-
-
-/* ==================================================
-   PHOTO → LETTER
-================================================== */
-
-letterBtn.addEventListener("click", () => {
-
-    changeScene(
-        photoScene,
-        letterScene,
-        3
-    );
-
-});
-
-
-/* ==================================================
-   LETTER
-================================================== */
-
-let letterOpened = false;
-
-openLetter.addEventListener("click", () => {
-
-    if (!letterOpened) {
-
-        letterOpened = true;
-
-        envelope.classList.add("open");
-
-        openLetter.textContent =
-            "Continue the surprise →";
-
-        setTimeout(() => {
-
-            typeMessage();
-
-        }, 700);
-
-    } else {
+beginBtn.addEventListener(
+    "click",
+    () => {
 
         changeScene(
-            letterScene,
-            finalScene,
-            4
+            opening,
+            rakhiScene,
+            1
         );
 
     }
+);
 
-});
+
+/* RAKHI → MEMORY */
+
+memoryBtn.addEventListener(
+    "click",
+    () => {
+
+        changeScene(
+            rakhiScene,
+            memoryScene,
+            2
+        );
+
+    }
+);
 
 
-/* ==================================================
-   TYPEWRITER
-================================================== */
+/* MEMORY → LETTER */
+
+letterBtn.addEventListener(
+    "click",
+    () => {
+
+        changeScene(
+            memoryScene,
+            letterScene,
+            3
+        );
+
+    }
+);
+
+
+/* LETTER */
+
+let letterOpened = false;
+
+openLetter.addEventListener(
+    "click",
+    () => {
+
+        if (!letterOpened) {
+
+            letterOpened = true;
+
+            envelope.classList.add("open");
+
+            openLetter.textContent =
+                "Continue the surprise →";
+
+            setTimeout(
+                typeMessage,
+                700
+            );
+
+        } else {
+
+            changeScene(
+                letterScene,
+                finalScene,
+                3
+            );
+
+        }
+
+    }
+);
+
+
+/* TYPEWRITER */
 
 const message =
     "We may fight, irritate each other and sometimes pretend that we don't care. But honestly, life would be a lot less fun without you. Thank you for all the memories, all the laughs and even all those annoying moments. No matter how old we get, you'll always have a special place in my life.";
@@ -225,7 +218,10 @@ function typeMessage() {
 
             index++;
 
-            if (index >= message.length) {
+            if (
+                index >=
+                message.length
+            ) {
 
                 clearInterval(interval);
 
@@ -235,9 +231,7 @@ function typeMessage() {
 }
 
 
-/* ==================================================
-   PROGRESS
-================================================== */
+/* PROGRESS */
 
 function updateProgress(index) {
 
@@ -254,9 +248,7 @@ function updateProgress(index) {
 }
 
 
-/* ==================================================
-   CURSOR
-================================================== */
+/* CURSOR */
 
 const cursor =
     document.querySelector(".cursor");
@@ -285,36 +277,41 @@ document.addEventListener(
 );
 
 
-/* ==================================================
-   CURSOR HOVER
-================================================== */
+/* CURSOR HOVER */
 
 const interactive =
     document.querySelectorAll(
-        "button, .cinematic-photo, .envelope"
+        "button, .memory-universe, .envelope"
     );
 
+interactive.forEach(
+    (element) => {
 
-interactive.forEach((element) => {
+        element.addEventListener(
+            "mouseenter",
+            () => {
 
-    element.addEventListener(
-        "mouseenter",
-        () => {
+                cursor.style.width =
+                    "55px";
 
-            cursor.style.width = "55px";
-            cursor.style.height = "55px";
+                cursor.style.height =
+                    "55px";
 
-        }
-    );
+            }
+        );
 
-    element.addEventListener(
-        "mouseleave",
-        () => {
+        element.addEventListener(
+            "mouseleave",
+            () => {
 
-            cursor.style.width = "35px";
-            cursor.style.height = "35px";
+                cursor.style.width =
+                    "35px";
 
-        }
-    );
+                cursor.style.height =
+                    "35px";
 
-});
+            }
+        );
+
+    }
+);
