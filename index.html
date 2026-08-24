@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For You, Sis.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+
+    <!-- Ambient Background -->
+    <div class="ambient ambient-1"></div>
+    <div class="ambient ambient-2"></div>
+    <div class="ambient ambient-3"></div>
+
+    <div class="stars" id="stars"></div>
+
+
+    <!-- ==================================================
+         SCENE 01
+    =================================================== -->
+
+    <section class="scene opening" id="opening">
+
+        <div class="opening-content">
+
+            <p class="micro-text">
+                AUGUST 2026
+            </p>
+
+            <h1>
+                Some bonds
+                <span>don't need words.</span>
+            </h1>
+
+            <p class="opening-subtitle">
+                They simply stay.
+            </p>
+
+            <button class="begin-btn" id="beginBtn">
+
+                <span>Begin the surprise</span>
+
+                <strong>→</strong>
+
+            </button>
+
+        </div>
+
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         SCENE 02 — RAKHI
+    =================================================== -->
+
+    <section class="scene rakhi-scene hidden" id="rakhiScene">
+
+        <div class="scene-number">
+            01
+        </div>
+
+        <div class="rakhi-content">
+
+            <p class="micro-text">
+                A THREAD. A PROMISE. A BOND.
+            </p>
+
+
+            <div class="rakhi-art">
+
+                <div class="thread thread-left"></div>
+
+                <div class="rakhi-orbit orbit-one"></div>
+                <div class="rakhi-orbit orbit-two"></div>
+
+                <div class="rakhi-core">
+
+                    <div class="core-ring ring-one"></div>
+                    <div class="core-ring ring-two"></div>
+
+                    <div class="core-center">
+                        <span>✦</span>
+                    </div>
+
+                    <div class="gem gem-1"></div>
+                    <div class="gem gem-2"></div>
+                    <div class="gem gem-3"></div>
+                    <div class="gem gem-4"></div>
+
+                </div>
+
+                <div class="thread thread-right"></div>
+
+            </div>
+
+
+            <h2>
+                Tied once.
+                <span>Remembered forever.</span>
+            </h2>
+
+            <p class="rakhi-description">
+                Because some relationships become more
+                beautiful with every passing year.
+            </p>
+
+            <button class="next-btn" id="photoBtn">
+                There's something I want you to see
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         SCENE 03 — PHOTO
+    =================================================== -->
+
+    <section class="scene photo-scene hidden" id="photoScene">
+
+        <div class="scene-number">
+            02
+        </div>
+
+
+        <div class="photo-content">
+
+            <div class="photo-heading">
+
+                <p class="micro-text">
+                    ONE OF MY FAVOURITE PEOPLE
+                </p>
+
+                <h2>
+                    Behind every
+                    <span>memory...</span>
+                </h2>
+
+            </div>
+
+
+            <!-- LANDSCAPE PHOTO -->
+            <div class="cinematic-photo">
+
+                <div class="photo-overlay"></div>
+
+                <img
+                    src="assets/images/sister.jpeg"
+                    alt="My Sister"
+                >
+
+                <div class="photo-top-info">
+                    <span>MEMORY / 01</span>
+                    <span>♡</span>
+                </div>
+
+                <div class="photo-caption">
+
+                    <div>
+
+                        <p>
+                            MY SISTER
+                        </p>
+
+                        <h3>
+                            One of my favourite
+                            people in this world.
+                        </h3>
+
+                    </div>
+
+                    <div class="photo-year">
+                        ALWAYS
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="photo-bottom">
+
+                <p>
+                    Some photographs capture a moment.
+                    Some capture a feeling.
+                </p>
+
+                <button class="next-btn" id="letterBtn">
+                    Open the letter
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         SCENE 04 — LETTER
+    =================================================== -->
+
+    <section class="scene letter-scene hidden" id="letterScene">
+
+        <div class="scene-number">
+            03
+        </div>
+
+        <div class="letter-wrapper">
+
+            <p class="micro-text">
+                A FEW WORDS FROM YOUR BROTHER
+            </p>
+
+
+            <div class="envelope" id="envelope">
+
+                <div class="envelope-back"></div>
+
+                <div class="letter-paper">
+
+                    <div class="letter-content">
+
+                        <p class="letter-greeting">
+                            Hey Sis,
+                        </p>
+
+                        <p id="typingText"></p>
+
+                        <p class="letter-end">
+                            Always stay the way you are. ❤️
+                        </p>
+
+                        <div class="signature">
+                            — Your Brother
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="envelope-front"></div>
+
+                <div class="envelope-flap"></div>
+
+            </div>
+
+
+            <button class="open-letter" id="openLetter">
+                Open my letter
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         SCENE 05 — FINAL
+    =================================================== -->
+
+    <section class="scene final-scene hidden" id="finalScene">
+
+        <div class="final-glow"></div>
+
+        <div class="final-content">
+
+            <div class="final-symbol">
+                <span></span>
+            </div>
+
+            <p class="micro-text">
+                AND ONE LAST THING
+            </p>
+
+            <h2>
+                No matter how much
+                <span>we grow up...</span>
+            </h2>
+
+            <p class="final-text">
+                Life will change, things will change,
+                and maybe we'll become busier than we are today.
+            </p>
+
+            <p class="final-text">
+                But one thing won't change —
+                <strong>you're my sister.</strong>
+            </p>
+
+            <div class="final-line"></div>
+
+            <p class="rakhi-wish">
+                Happy Raksha Bandhan
+            </p>
+
+            <p class="small-love">
+                Made with a little code and a lot of love.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Progress -->
+    <div class="progress" id="progress">
+
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
