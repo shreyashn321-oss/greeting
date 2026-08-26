@@ -1167,113 +1167,71 @@ body {
 }
 
 
-/* MOBILE */
+/* ================================
+   MOBILE LETTER FIX
+================================ */
 
 @media (max-width: 700px) {
 
-    .scene {
-        padding: 20px;
-    }
-
-    .cursor,
-    .cursor-dot {
-        display: none;
-    }
-
-    .opening h1 {
-        font-size: 64px;
-        letter-spacing: -3px;
-    }
-
-    .opening-subtitle {
-        font-size: 10px;
-    }
-
-    .scene-number {
-        top: 20px;
-        right: 20px;
-    }
-
-    .rakhi-art {
-        width: 330px;
-        height: 150px;
-    }
-
-    .thread {
-        width: 85px;
-    }
-
-    .rakhi-core {
-        width: 105px;
-        height: 105px;
-    }
-
-    .orbit-one {
-        width: 140px;
-        height: 140px;
-    }
-
-    .orbit-two {
-        width: 175px;
-        height: 175px;
-    }
-
-    .rakhi-content h2 {
-        font-size: 52px;
-    }
-
-    .memory-content h2 {
-        font-size: 52px;
-    }
-
-    .memory-universe {
-        width: 340px;
-        height: 230px;
-    }
-
-    .orbit-a {
-        width: 150px;
-        height: 150px;
-    }
-
-    .orbit-b {
-        width: 240px;
-        height: 140px;
-    }
-
-    .orbit-c {
-        width: 320px;
-        height: 200px;
-    }
-
-    .memory-core {
-        width: 105px;
-        height: 105px;
-    }
-
-    .core-heart {
-        font-size: 34px;
-    }
-
-    .memory-text {
-        font-size: 10px;
-        max-width: 310px;
-    }
-
     .letter-wrapper {
-        transform: scale(.75);
+        width: 100%;
+        transform: none;
     }
 
-    .final-content h2 {
-        font-size: 58px;
-        letter-spacing: -2px;
+    .envelope {
+        width: 330px;
+        height: 230px;
+        margin: 20px auto 30px;
     }
 
-    .final-text {
+    .letter-paper {
+        left: 5%;
+        width: 90%;
+        height: 205px;
+        bottom: 8px;
+
+        overflow: hidden;
+
+        transform: translateY(15px);
+    }
+
+    .envelope.open .letter-paper {
+        transform: translateY(-95px);
+    }
+
+    .letter-content {
+        padding: 20px 18px;
+
         font-size: 12px;
+        line-height: 1.45;
+
+        height: 100%;
+        overflow-y: auto;
     }
 
-    .progress {
-        right: 12px;
+    .letter-greeting {
+        font-size: 21px;
+        margin-bottom: 10px;
+    }
+
+    .letter-end {
+        margin-top: 12px;
+    }
+
+    .signature {
+        margin-top: 10px;
+    }
+
+    .envelope-front {
+        height: 58%;
+    }
+
+    .envelope-flap {
+        height: 60%;
+    }
+
+    .open-letter {
+        position: relative;
+        z-index: 20;
     }
 }
